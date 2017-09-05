@@ -40,9 +40,9 @@ This solution was based on [Heng CherKeng's code for PyTorch](https://www.kaggle
 ### Data
 Place '*train*', '*train_masks*' and '*test*' data folders in the '*input*' folder.
 
-Convert training masks to *.png* format. You can do this with: 
+Convert training masks to *.png* format. You can do this with:
 
-` mogrify -format png *.gif` 
+` mogrify -format png *.gif`
 
 in the '*train_masks*' data folder.
 
@@ -51,3 +51,6 @@ Run `python train.py` to train the model.
 
 ### Test and submit
 Run `python test_submit.py` to make predictions on test data and generate submission.
+
+### New changes
+Can use super resolution
