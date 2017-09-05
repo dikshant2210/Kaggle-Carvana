@@ -35,6 +35,15 @@ This solution was based on [Heng CherKeng's code for PyTorch](https://www.kaggle
 
 ---
 
+## Usage
+
+### Data
+Place '*train*', '*train_masks*' and '*test*' data folders in the '*input*' folder.
+Extract masks to '*train_masks_gif*' folder
+
+### Mask Conersion
+Run `python gif2png.py` to convert gif masks to png.
+
 ### Train
 Run `python train.py` to train the model.
 
