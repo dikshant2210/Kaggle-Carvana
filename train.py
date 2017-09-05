@@ -152,10 +152,11 @@ callbacks = [EarlyStopping(monitor='val_dice_loss',
                              mode='max'),
              TensorBoard(log_dir='logs')]
 
+print(model.summary)
 model.fit_generator(generator=train_generator(),
                     steps_per_epoch=np.ceil(float(len(ids_train_split)) / float(batch_size)),
                     epochs=epochs,
-                    verbose=2,
+                    verbose=1,
                     callbacks=callbacks,
                     validation_data=valid_generator(),
                     validation_steps=np.ceil(float(len(ids_valid_split)) / float(batch_size)))
