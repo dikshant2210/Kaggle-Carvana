@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 import params
 
 input_size = params.input_size
+mask_size = params.mask_size
 epochs = params.max_epochs
 batch_size = params.batch_size
 model = params.model
@@ -152,7 +153,7 @@ callbacks = [EarlyStopping(monitor='val_dice_loss',
                              mode='max'),
              TensorBoard(log_dir='logs')]
 
-print(model.summary)
+print(model.summary())
 model.fit_generator(generator=train_generator(),
                     steps_per_epoch=np.ceil(float(len(ids_train_split)) / float(batch_size)),
                     epochs=epochs,
